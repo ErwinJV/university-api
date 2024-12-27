@@ -27,8 +27,8 @@ class StudentFactory extends Factory
         return [
             'name'=>$this->faker->firstName(),
             'last_name'=>$this->faker->lastName(),
-            'email'=>$this->faker->email(),
-            'document'=>$this->faker->randomNumber(9),
+            'email'=>$this->faker->unique()->email(),
+            'document'=>$this->faker->unique()->randomNumber(9),
             'career_id'=>$this->faker->randomElement($careers_id),
         ];
     }
