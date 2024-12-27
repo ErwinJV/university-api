@@ -22,5 +22,10 @@ class Career extends Model
         return $this->hasMany(Student::class);
     }
 
+    public function classrooms()
+    {
+        return $this->hasMany(Classroom::class);
+    }
+
     
 }
